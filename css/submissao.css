@@ -1,9 +1,9 @@
-td .ouro {
-	background-color: rgba(22,190,34,255);
+.ouro {
+	background-color: gold !important;
 }
-td .prata {
-	background-color: rgba(204,204,204,255);
+.prata {
+	background-color: silver !important;
 }
-td .bronze {
-	background-color: rgba(190,91,23,255);
+.bronze {
+	background-color: #cd7f32 !important;
 }
