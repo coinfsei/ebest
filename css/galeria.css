@@ -1,0 +1,65 @@
+.h3-custom{
+    margin-top: 42px;
+}
+
+#titulo-galeria {
+  text-align: center;	
+}
+
+.thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.thumbnails img {
+    width: 150px;
+    height: 100px;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.full-image {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro semi-transparente */
+}
+
+#galeria, #galeria .content, #galeria .content-scroll {
+	display: flex !important;
+}
+
+.full-image img {
+    max-width: 90%; /* Tamanho máximo da imagem */
+    max-height: 70vh; /* Altura máxima da imagem para caber na janela */
+    object-fit: contain; /* Mantém a proporção da imagem */
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: auto;
+  background-position: center;
+  background-attachment: fixed;
+}
+.content-scroll {
+  overflow-y: auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.box {
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 11px 6px;
+}

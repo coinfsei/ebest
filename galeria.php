@@ -11,14 +11,15 @@
     <!-- Barra de Navegação -->
     <?php include('./snippets/navegacao.html'); ?>
 
-    <!-- Sessão Home -->
-    <?php include('./snippets/home.html'); ?>
-
-    <!-- Sessão dos Patrocinadores -->
-    <?php include('./snippets/patrocinio.html'); ?>
-
     <!-- Modal de Versões Anteriores -->
     <?php include('./snippets/botao-flutuante.html'); ?>
+
+	<!--Galeria -->
+	<main class="content-scroll" id="galeria">
+		<?php include ('./snippets/galeria.html');?>
+	</main>
+    <!-- Sessão dos Patrocinadores -->
+    <?php include('./snippets/patrocinio.html'); ?>
 
     <!-- Footer -->
     <?php include('./snippets/rodape.html'); ?>
