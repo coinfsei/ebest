@@ -5,15 +5,19 @@ $(document).ready(function () {
     if (this.hash !== "" && !$(this).attr("data-toggle")) {
       event.preventDefault();
       var hash = this.hash;
-      $("html, body").animate(
-        {
-          scrollTop: $(hash).offset().top,
-        },
-        700,
-        function () {
-          window.location.hash = hash;
-        }
-      );
+
+      // Verifique se o elemento com o hash existe antes de tentar rolar
+      if ($(hash).length) {
+        $("html, body").animate(
+          {
+            scrollTop: $(hash).offset().top,
+          },
+          700,
+          function () {
+            window.location.hash = hash;
+          }
+        );
+      }
 
       // Collapse the navbar after clicking on an item (only on mobile view)
       if ($(".navbar-toggler").is(":visible")) {
@@ -34,7 +38,7 @@ $(document).ready(function () {
     $("#galleryModal").modal("show");
   });
 
-  // Show versoes modal when clicking on the "Gallery" menu item
+  // Show versoes modal when clicking on the "Versoes" menu item
   $('a[href="#versoes"]').on("click", function (event) {
     event.preventDefault();
     $("#previousVersionsModal").modal("show");
@@ -66,7 +70,6 @@ $(document).ready(function () {
       $("#botao-inscricao").fadeIn();
       $("#botao-submissao").fadeIn();
       $("#botao-compartilhar").fadeIn();
-      $("").fadeIn();
     } else {
       $("#botao-inscricao").fadeOut();
       $("#botao-submissao").fadeOut();
@@ -82,7 +85,6 @@ $(document).ready(function () {
     });
   });
 
-
   // Collapse navbar when clicking on the brand link
   $('a.navbar-brand').on('click', function () {
     if ($(".navbar-collapse").hasClass("show")) {
@@ -90,17 +92,17 @@ $(document).ready(function () {
     }
   });
 
-  // Script para alternar entre Expandir biografia e Retrair biografia 
+  // Script para alternar entre Expandir biografia e Recolher biografia 
   document.querySelectorAll('.toggle-btn').forEach(function(button) {
     button.addEventListener('click', function() {
-        // Verifica se o conteúdo está expandido ou colapsado
-        var collapseElement = document.querySelector(this.getAttribute('href'));
-        if (collapseElement.classList.contains('show')) {
-            this.textContent = 'Expandir biografia';
-        } else {
-            this.textContent = 'Recolher biografia';
-        }
+      // Verifica se o conteúdo está expandido ou colapsado
+      var collapseElement = document.querySelector(this.getAttribute('href'));
+      if (collapseElement.classList.contains('show')) {
+        this.textContent = 'Expandir biografia';
+      } else {
+        this.textContent = 'Recolher biografia';
+      }
     });
-});
+  });
 
 });
