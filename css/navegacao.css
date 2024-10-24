@@ -2,7 +2,7 @@
     font-weight: bold;
     /* Negrito para itens destacados */
     border-radius: 5px;
-    background-color: gray;
+    background-color: #6c757d;
     box-shadow: 2px 2px 5px hsl(0deg 0% 0% / 30%);
 }
 
