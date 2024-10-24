@@ -29,12 +29,12 @@
     padding-left: 8rem;
 }
 
-.navbar-nav-custom{
+.navbar-nav-custom {
     gap: .5rem;
 }
 
 #navbarNav {
-    justify-content: flex-end;
+/*     justify-content: flex-end; */
 }
 
 #botao-home {
